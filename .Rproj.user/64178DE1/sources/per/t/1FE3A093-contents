@@ -1,0 +1,69 @@
+`r if (knitr::is_html_output()) '
+
+# References {-}
+
+
+교육부. (2020). 교육통계서비스. 세종: 교육부. <https://blog.naver.com/PostView.nhn?blogId=kedi_cesi&logNo=222075980430>
+
+
+김권현. (2019). *R로 하는 빅데이타 분석: 데이터 전처리와 시각화-개념적 기초에서 심층 활용까지.* 서울: 숨은 원리.
+
+
+김영우. (2017). *Do it! 쉽게 배우는 R 데이터 분석*. 서울: 이지스퍼블리싱. 
+
+
+노성진. (2020). 비대면 교육을 위한 RStudio Cloud 및 수자원 관련 R 패키지의 소개. 한국수자원학회, Volume 53 Issue 7, pp. 98-107. 
+
+
+신현재, 안영신. (2013). *꽃으로 피어나는 교사의 삶*. 서울: 박이정.
+
+
+송석리, 이현아. (2019). *모두의 데이터 분석 with 파이썬*. 서울: 길벗.
+
+
+윈스턴 챙, 이제원(역). (2017). *R graphics cookbook(3쇄).* 서울: 인사이트. 
+
+
+유충현, 홍성학. (2018). *R을 활용한 데이타 시각화.* 서울: 인사이트. 
+
+
+전희원. R 기반의 데이터 시각화. 온라인자료<http://freesearch.pe.kr/archives/3891>
+
+
+황규인. (2021). *친절한 R with 스포츠 데이터: 스포츠 통계로 알아보는 데이터 과학*. 서울: 영진닷컴. 
+
+
+한국데이타산업진흥원. (2013). *가장 많이 받는 R관련 기술적 질문.* <https://dataonair.or.kr/db-tech-reference/d-story/data-story/?mod=document&uid=63131>
+
+
+해들리위컴, 개럿 그롤몬드. 김설기, 최혜민(역). (2013). *R을 활용한 데이타 과학: 데이타 불러오기, 정리하기, 변형하기, 시각화하기, 모델링하기(3쇄).* 서울: 프로그래밍인사이트. 
+
+
+Coursera. (2021). Python or R for Data Analysis: Which Should I Learn?. 
+https://www.coursera.org/articles/python-or-r-for-data-analysis?utm_source=gg&utm_medium=sem&utm_content=01-CatalogDSA-ML2-US&campaignid=12490862811&adgroupid=119269357576&device=c&keyword=&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=503940597764&hide_mobile_promo&gclid=Cj0KCQjw3f6HBhDHARIsAD_i3D_hcI6alWxBSZs10p4JmFkjGZnpzCd4PCocz5kMsmqsJDqsqjD9jhcaAud9EALw_wcB
+
+Flatironschool. (2021. Feb 04). R Vs Python: Which One Should You Learn? <https://flatironschool.com/blog/r-vs-python>
+
+
+Wilkinson, L. (2005). *The grammar of graphics.* Springer.
+
+
+Muenchen, R, A. (2020). The Popularity of Data Science Software. <http://r4stats.com/articles/popularity>
+
+
+Colin, G., Robin. L. (2016). Efficient R programming(Online version). Sebastopol, USA: O’Reilly.  
+<https://csgillespie.github.io/efficientR/hardware.html>
+
+
+Xie, Y. (2017). *Bookdown: Authoring books and technical documents with R Markdown.* Boca Raton:FL.
+
+
+> 알면 쉽지만 모르면 어렵다!
+> 무슨 화면인지 얘기를 들으면 별거 아니구나!
+
+
+*<한국영어교육학회 저널의 참고문헌 작성법: 온라인 자료 인용>*
+Gonglewski, M., Meloni, C., & Brant, J. (2001). Using E-mail in foreign language
+teaching: Rationale and suggestions. The Internet TESL Journal, 7(3).
+Retrieved on March 05, 2019, from http://iteslj.org/Techniques/
+Meloni-Email.html

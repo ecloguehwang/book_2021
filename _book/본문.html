@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 본문 | R로해 진학지도</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 본문 | R로해 진학지도" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 본문 | R로해 진학지도" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="김종헌, 황성삼" />
+
+
+<meta name="date" content="2021-07-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="intro.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> R과 R Studio설치</a></li>
+<li class="chapter" data-level="2" data-path="본문.html"><a href="본문.html"><i class="fa fa-check"></i><b>2</b> 본문</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="본문.html"><a href="본문.html#초급"><i class="fa fa-check"></i><b>2.1</b> 초급</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="본문.html"><a href="본문.html#igraph를-활용한-생기부-입력자료-정리"><i class="fa fa-check"></i><b>2.1.1</b> igraph를 활용한 생기부 입력자료 정리</a></li>
+<li class="chapter" data-level="2.1.2" data-path="본문.html"><a href="본문.html#igraph를-활용한-교우관계"><i class="fa fa-check"></i><b>2.1.2</b> igraph를 활용한 교우관계</a></li>
+<li class="chapter" data-level="2.1.3" data-path="본문.html"><a href="본문.html#내신등급-변화-그래프"><i class="fa fa-check"></i><b>2.1.3</b> 내신등급 변화 그래프</a></li>
+<li class="chapter" data-level="2.1.4" data-path="본문.html"><a href="본문.html#내신과-수능과의-상관관계"><i class="fa fa-check"></i><b>2.1.4</b> 내신과 수능과의 상관관계</a></li>
+<li class="chapter" data-level="2.1.5" data-path="본문.html"><a href="본문.html#내신과-수능의-회귀선"><i class="fa fa-check"></i><b>2.1.5</b> 내신과 수능의 회귀선</a></li>
+<li class="chapter" data-level="2.1.6" data-path="본문.html"><a href="본문.html#데이타마이닝-학급데이타-정리"><i class="fa fa-check"></i><b>2.1.6</b> 데이타마이닝: 학급데이타 정리</a></li>
+<li class="chapter" data-level="2.1.7" data-path="본문.html"><a href="본문.html#대학에서-모집요강-가져오기-데이타-크롤링"><i class="fa fa-check"></i><b>2.1.7</b> 대학에서 모집요강 가져오기: 데이타 크롤링</a></li>
+<li class="chapter" data-level="2.1.8" data-path="본문.html"><a href="본문.html#내신과-수시합격자를-상자그림으로-그리기"><i class="fa fa-check"></i><b>2.1.8</b> 내신과 수시합격자를 상자그림으로 그리기</a></li>
+<li class="chapter" data-level="2.1.9" data-path="본문.html"><a href="본문.html#수능응시자를-재학생과-졸업생으로-나누어-그리기-area그래프"><i class="fa fa-check"></i><b>2.1.9</b> 수능응시자를 재학생과 졸업생으로 나누어 그리기: area그래프</a></li>
+<li class="chapter" data-level="2.1.10" data-path="본문.html"><a href="본문.html#수능응시자-재학생-재수생-응시비율-그래프"><i class="fa fa-check"></i><b>2.1.10</b> 수능응시자 재학생, 재수생 응시비율 그래프</a></li>
+<li class="chapter" data-level="2.1.11" data-path="본문.html"><a href="본문.html#수시정시-모집비율-수시와-정시를-각각-선그래프로-그리기"><i class="fa fa-check"></i><b>2.1.11</b> 수시정시 모집비율: 수시와 정시를 각각 선그래프로 그리기</a></li>
+<li class="chapter" data-level="2.1.12" data-path="본문.html"><a href="본문.html#수능-재학재수생-응시비율그래프와-수시정시-모집비율을-함께patchwork-라이브러리-이용"><i class="fa fa-check"></i><b>2.1.12</b> 수능 재학,재수생 응시비율그래프와 수시정시 모집비율을 함께:patchwork 라이브러리 이용</a></li>
+<li class="chapter" data-level="2.1.13" data-path="본문.html"><a href="본문.html#수능탐구과목-표준점수-만점과-응시자수-그래프"><i class="fa fa-check"></i><b>2.1.13</b> 수능탐구과목 표준점수 만점과 응시자수 그래프</a></li>
+<li class="chapter" data-level="2.1.14" data-path="본문.html"><a href="본문.html#수능탐구과목-표준점수-만점과-응시자수-그래프에서-사탐과-과탐을-구분하여-그리기"><i class="fa fa-check"></i><b>2.1.14</b> 수능탐구과목 표준점수 만점과 응시자수 그래프에서 사탐과 과탐을 구분하여 그리기</a></li>
+<li class="chapter" data-level="2.1.15" data-path="본문.html"><a href="본문.html#수능최저등급-변화로-합격자-감소를-강조하는-화살표-그리기"><i class="fa fa-check"></i><b>2.1.15</b> 수능최저등급 변화로 합격자 감소를 강조하는 화살표 그리기</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="본문.html"><a href="본문.html#중급"><i class="fa fa-check"></i><b>2.2</b> 중급</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="본문.html"><a href="본문.html#단순-막대그래프를-이용한-대학-합격자-그래프"><i class="fa fa-check"></i><b>2.2.1</b> 단순 막대그래프를 이용한 대학 합격자 그래프</a></li>
+<li class="chapter" data-level="2.2.2" data-path="본문.html"><a href="본문.html#누적-막대그래프를-이용한-대학-합격자-그래프"><i class="fa fa-check"></i><b>2.2.2</b> 누적 막대그래프를 이용한 대학 합격자 그래프</a></li>
+<li class="chapter" data-level="2.2.3" data-path="본문.html"><a href="본문.html#클리브랜드-그래프로-대학-합격자-정시수시-합격자-그래프"><i class="fa fa-check"></i><b>2.2.3</b> 클리브랜드 그래프로 대학 합격자 정시수시 합격자 그래프</a></li>
+<li class="chapter" data-level="2.2.4" data-path="본문.html"><a href="본문.html#대학합격자를-수시와-정시로-나누기-facet를-이용"><i class="fa fa-check"></i><b>2.2.4</b> 대학합격자를 수시와 정시로 나누기: facet를 이용</a></li>
+<li class="chapter" data-level="2.2.5" data-path="본문.html"><a href="본문.html#음양그래프를-이용한-2개년-대학-합격자-그래프"><i class="fa fa-check"></i><b>2.2.5</b> 음양그래프를 이용한 2개년 대학 합격자 그래프</a></li>
+<li class="chapter" data-level="2.2.6" data-path="본문.html"><a href="본문.html#지도위에-표시하는-대학합격자수"><i class="fa fa-check"></i><b>2.2.6</b> 지도위에 표시하는 대학합격자수</a></li>
+<li class="chapter" data-level="2.2.7" data-path="본문.html"><a href="본문.html#트리맵treemap으로-그리는-대학합격자-그래프"><i class="fa fa-check"></i><b>2.2.7</b> 트리맵(treemap)으로 그리는 대학합격자 그래프</a></li>
+<li class="chapter" data-level="2.2.8" data-path="본문.html"><a href="본문.html#수시에-정시까지-센키sankey그래프"><i class="fa fa-check"></i><b>2.2.8</b> 수시에 정시까지: 센키(Sankey)그래프</a></li>
+<li class="chapter" data-level="2.2.9" data-path="본문.html"><a href="본문.html#출생자수와-출산율-그리기-y축이-2개인-듀얼그래프"><i class="fa fa-check"></i><b>2.2.9</b> 출생자수와 출산율 그리기: y축이 2개인 듀얼그래프</a></li>
+<li class="chapter" data-level="2.2.10" data-path="본문.html"><a href="본문.html#개이상의-그래프를-한-페이지에-그리기-gridextra-라이브러리"><i class="fa fa-check"></i><b>2.2.10</b> 3개이상의 그래프를 한 페이지에 그리기: gridExtra 라이브러리</a></li>
+<li class="chapter" data-level="2.2.11" data-path="본문.html"><a href="본문.html#수시-전형별-합불-반응형-그래프-상자그림"><i class="fa fa-check"></i><b>2.2.11</b> 수시 전형별 합불 반응형 그래프: 상자그림</a></li>
+<li class="chapter" data-level="2.2.12" data-path="본문.html"><a href="본문.html#수시-5가지를-보여주는-반응형-그래프상자그림과-label-이용"><i class="fa fa-check"></i><b>2.2.12</b> 수시 5가지를 보여주는 반응형 그래프:상자그림과 label 이용</a></li>
+<li class="chapter" data-level="2.2.13" data-path="본문.html"><a href="본문.html#수업-내용분석-물리과를-예시로"><i class="fa fa-check"></i><b>2.2.13</b> 수업 내용분석: 물리과를 예시로</a></li>
+<li class="chapter" data-level="2.2.14" data-path="본문.html"><a href="본문.html#연관규칙-찾기"><i class="fa fa-check"></i><b>2.2.14</b> 연관규칙 찾기</a></li>
+<li class="chapter" data-level="2.2.15" data-path="본문.html"><a href="본문.html#시험문제-문항분석"><i class="fa fa-check"></i><b>2.2.15</b> 시험문제 문항분석</a></li>
+<li class="chapter" data-level="2.2.16" data-path="본문.html"><a href="본문.html#학생별-정기고사-선택과목-리스트를-만들기"><i class="fa fa-check"></i><b>2.2.16</b> 학생별 정기고사 선택과목 리스트를 만들기</a></li>
+<li class="chapter" data-level="2.2.17" data-path="본문.html"><a href="본문.html#선호대학-선호학과-워드클라우드"><i class="fa fa-check"></i><b>2.2.17</b> 선호대학, 선호학과 워드클라우드</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="본문.html"><a href="본문.html#고급"><i class="fa fa-check"></i><b>2.3</b> 고급</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="본문.html"><a href="본문.html#영어과-수행평가-텍스트분석"><i class="fa fa-check"></i><b>2.3.1</b> 영어과 수행평가 텍스트분석</a></li>
+<li class="chapter" data-level="2.3.2" data-path="본문.html"><a href="본문.html#생활기록부-행동특성-및-종합의견-워드-클라우드"><i class="fa fa-check"></i><b>2.3.2</b> 생활기록부 행동특성 및 종합의견 워드 클라우드</a></li>
+<li class="chapter" data-level="2.3.3" data-path="본문.html"><a href="본문.html#생활기록부-행동특성-및-종합의견-토픽-모델링"><i class="fa fa-check"></i><b>2.3.3</b> 생활기록부 행동특성 및 종합의견 토픽 모델링</a></li>
+<li class="chapter" data-level="2.3.4" data-path="본문.html"><a href="본문.html#학교부적응학생-판별"><i class="fa fa-check"></i><b>2.3.4</b> 학교부적응학생 판별</a></li>
+<li class="chapter" data-level="2.3.5" data-path="본문.html"><a href="본문.html#머신러닝의-비지도학습-군집분석을-이용한-000"><i class="fa fa-check"></i><b>2.3.5</b> 머신러닝의 비지도학습: 군집분석을 이용한 000</a></li>
+<li class="chapter" data-level="2.3.6" data-path="본문.html"><a href="본문.html#kaist-서류전형-합격-예측모델"><i class="fa fa-check"></i><b>2.3.6</b> KAIST 서류전형 합격 예측모델</a></li>
+<li class="chapter" data-level="2.3.7" data-path="본문.html"><a href="본문.html#서울대-서류전형-합격-예측모델"><i class="fa fa-check"></i><b>2.3.7</b> 서울대 서류전형 합격 예측모델</a></li>
+<li class="chapter" data-level="2.3.8" data-path="본문.html"><a href="본문.html#구조방정식-모형을-이용한-000"><i class="fa fa-check"></i><b>2.3.8</b> 구조방정식 모형을 이용한 000</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> 준비사항</a></li>
+<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
+<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a></li>
+<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
+<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R로해 진학지도</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="본문" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> 본문</h1>
+<div id="초급" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> 초급</h2>
+<div id="igraph를-활용한-생기부-입력자료-정리" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> igraph를 활용한 생기부 입력자료 정리</h3>
+</div>
+<div id="igraph를-활용한-교우관계" class="section level3" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> igraph를 활용한 교우관계</h3>
+</div>
+<div id="내신등급-변화-그래프" class="section level3" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> 내신등급 변화 그래프</h3>
+</div>
+<div id="내신과-수능과의-상관관계" class="section level3" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> 내신과 수능과의 상관관계</h3>
+</div>
+<div id="내신과-수능의-회귀선" class="section level3" number="2.1.5">
+<h3><span class="header-section-number">2.1.5</span> 내신과 수능의 회귀선</h3>
+</div>
+<div id="데이타마이닝-학급데이타-정리" class="section level3" number="2.1.6">
+<h3><span class="header-section-number">2.1.6</span> 데이타마이닝: 학급데이타 정리</h3>
+</div>
+<div id="대학에서-모집요강-가져오기-데이타-크롤링" class="section level3" number="2.1.7">
+<h3><span class="header-section-number">2.1.7</span> 대학에서 모집요강 가져오기: 데이타 크롤링</h3>
+</div>
+<div id="내신과-수시합격자를-상자그림으로-그리기" class="section level3" number="2.1.8">
+<h3><span class="header-section-number">2.1.8</span> 내신과 수시합격자를 상자그림으로 그리기</h3>
+</div>
+<div id="수능응시자를-재학생과-졸업생으로-나누어-그리기-area그래프" class="section level3" number="2.1.9">
+<h3><span class="header-section-number">2.1.9</span> 수능응시자를 재학생과 졸업생으로 나누어 그리기: area그래프</h3>
+</div>
+<div id="수능응시자-재학생-재수생-응시비율-그래프" class="section level3" number="2.1.10">
+<h3><span class="header-section-number">2.1.10</span> 수능응시자 재학생, 재수생 응시비율 그래프</h3>
+</div>
+<div id="수시정시-모집비율-수시와-정시를-각각-선그래프로-그리기" class="section level3" number="2.1.11">
+<h3><span class="header-section-number">2.1.11</span> 수시정시 모집비율: 수시와 정시를 각각 선그래프로 그리기</h3>
+</div>
+<div id="수능-재학재수생-응시비율그래프와-수시정시-모집비율을-함께patchwork-라이브러리-이용" class="section level3" number="2.1.12">
+<h3><span class="header-section-number">2.1.12</span> 수능 재학,재수생 응시비율그래프와 수시정시 모집비율을 함께:patchwork 라이브러리 이용</h3>
+</div>
+<div id="수능탐구과목-표준점수-만점과-응시자수-그래프" class="section level3" number="2.1.13">
+<h3><span class="header-section-number">2.1.13</span> 수능탐구과목 표준점수 만점과 응시자수 그래프</h3>
+</div>
+<div id="수능탐구과목-표준점수-만점과-응시자수-그래프에서-사탐과-과탐을-구분하여-그리기" class="section level3" number="2.1.14">
+<h3><span class="header-section-number">2.1.14</span> 수능탐구과목 표준점수 만점과 응시자수 그래프에서 사탐과 과탐을 구분하여 그리기</h3>
+</div>
+<div id="수능최저등급-변화로-합격자-감소를-강조하는-화살표-그리기" class="section level3" number="2.1.15">
+<h3><span class="header-section-number">2.1.15</span> 수능최저등급 변화로 합격자 감소를 강조하는 화살표 그리기</h3>
+</div>
+</div>
+<div id="중급" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> 중급</h2>
+<div id="단순-막대그래프를-이용한-대학-합격자-그래프" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> 단순 막대그래프를 이용한 대학 합격자 그래프</h3>
+</div>
+<div id="누적-막대그래프를-이용한-대학-합격자-그래프" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> 누적 막대그래프를 이용한 대학 합격자 그래프</h3>
+</div>
+<div id="클리브랜드-그래프로-대학-합격자-정시수시-합격자-그래프" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> 클리브랜드 그래프로 대학 합격자 정시수시 합격자 그래프</h3>
+</div>
+<div id="대학합격자를-수시와-정시로-나누기-facet를-이용" class="section level3" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> 대학합격자를 수시와 정시로 나누기: facet를 이용</h3>
+</div>
+<div id="음양그래프를-이용한-2개년-대학-합격자-그래프" class="section level3" number="2.2.5">
+<h3><span class="header-section-number">2.2.5</span> 음양그래프를 이용한 2개년 대학 합격자 그래프</h3>
+</div>
+<div id="지도위에-표시하는-대학합격자수" class="section level3" number="2.2.6">
+<h3><span class="header-section-number">2.2.6</span> 지도위에 표시하는 대학합격자수</h3>
+</div>
+<div id="트리맵treemap으로-그리는-대학합격자-그래프" class="section level3" number="2.2.7">
+<h3><span class="header-section-number">2.2.7</span> 트리맵(treemap)으로 그리는 대학합격자 그래프</h3>
+</div>
+<div id="수시에-정시까지-센키sankey그래프" class="section level3" number="2.2.8">
+<h3><span class="header-section-number">2.2.8</span> 수시에 정시까지: 센키(Sankey)그래프</h3>
+</div>
+<div id="출생자수와-출산율-그리기-y축이-2개인-듀얼그래프" class="section level3" number="2.2.9">
+<h3><span class="header-section-number">2.2.9</span> 출생자수와 출산율 그리기: y축이 2개인 듀얼그래프</h3>
+</div>
+<div id="개이상의-그래프를-한-페이지에-그리기-gridextra-라이브러리" class="section level3" number="2.2.10">
+<h3><span class="header-section-number">2.2.10</span> 3개이상의 그래프를 한 페이지에 그리기: gridExtra 라이브러리</h3>
+</div>
+<div id="수시-전형별-합불-반응형-그래프-상자그림" class="section level3" number="2.2.11">
+<h3><span class="header-section-number">2.2.11</span> 수시 전형별 합불 반응형 그래프: 상자그림</h3>
+</div>
+<div id="수시-5가지를-보여주는-반응형-그래프상자그림과-label-이용" class="section level3" number="2.2.12">
+<h3><span class="header-section-number">2.2.12</span> 수시 5가지를 보여주는 반응형 그래프:상자그림과 label 이용</h3>
+</div>
+<div id="수업-내용분석-물리과를-예시로" class="section level3" number="2.2.13">
+<h3><span class="header-section-number">2.2.13</span> 수업 내용분석: 물리과를 예시로</h3>
+</div>
+<div id="연관규칙-찾기" class="section level3" number="2.2.14">
+<h3><span class="header-section-number">2.2.14</span> 연관규칙 찾기</h3>
+</div>
+<div id="시험문제-문항분석" class="section level3" number="2.2.15">
+<h3><span class="header-section-number">2.2.15</span> 시험문제 문항분석</h3>
+</div>
+<div id="학생별-정기고사-선택과목-리스트를-만들기" class="section level3" number="2.2.16">
+<h3><span class="header-section-number">2.2.16</span> 학생별 정기고사 선택과목 리스트를 만들기</h3>
+</div>
+<div id="선호대학-선호학과-워드클라우드" class="section level3" number="2.2.17">
+<h3><span class="header-section-number">2.2.17</span> 선호대학, 선호학과 워드클라우드</h3>
+</div>
+</div>
+<div id="고급" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> 고급</h2>
+<div id="영어과-수행평가-텍스트분석" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> 영어과 수행평가 텍스트분석</h3>
+</div>
+<div id="생활기록부-행동특성-및-종합의견-워드-클라우드" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> 생활기록부 행동특성 및 종합의견 워드 클라우드</h3>
+</div>
+<div id="생활기록부-행동특성-및-종합의견-토픽-모델링" class="section level3" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> 생활기록부 행동특성 및 종합의견 토픽 모델링</h3>
+</div>
+<div id="학교부적응학생-판별" class="section level3" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> 학교부적응학생 판별</h3>
+</div>
+<div id="머신러닝의-비지도학습-군집분석을-이용한-000" class="section level3" number="2.3.5">
+<h3><span class="header-section-number">2.3.5</span> 머신러닝의 비지도학습: 군집분석을 이용한 000</h3>
+</div>
+<div id="kaist-서류전형-합격-예측모델" class="section level3" number="2.3.6">
+<h3><span class="header-section-number">2.3.6</span> KAIST 서류전형 합격 예측모델</h3>
+</div>
+<div id="서울대-서류전형-합격-예측모델" class="section level3" number="2.3.7">
+<h3><span class="header-section-number">2.3.7</span> 서울대 서류전형 합격 예측모델</h3>
+</div>
+<div id="구조방정식-모형을-이용한-000" class="section level3" number="2.3.8">
+<h3><span class="header-section-number">2.3.8</span> 구조방정식 모형을 이용한 000</h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book_2021.pdf", "book_2021.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

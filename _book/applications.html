@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Applications | R로해 진학지도</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Applications | R로해 진학지도" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Applications | R로해 진학지도" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="김종헌, 황성삼" />
+
+
+<meta name="date" content="2021-07-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="methods.html"/>
+<link rel="next" href="final-words.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 저자서문</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#초급"><i class="fa fa-check"></i><b>1.1</b> 초급</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#igraph를-활용한-생기부-입력자료-정리"><i class="fa fa-check"></i><b>1.1.1</b> igraph를 활용한 생기부 입력자료 정리</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#igraph를-활용한-교우관계"><i class="fa fa-check"></i><b>1.1.2</b> igraph를 활용한 교우관계</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#내신등급-변화-그래프"><i class="fa fa-check"></i><b>1.1.3</b> 내신등급 변화 그래프</a></li>
+<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#내신과-수능과의-상관관계"><i class="fa fa-check"></i><b>1.1.4</b> 내신과 수능과의 상관관계</a></li>
+<li class="chapter" data-level="1.1.5" data-path="index.html"><a href="index.html#내신과-수능의-회귀선"><i class="fa fa-check"></i><b>1.1.5</b> 내신과 수능의 회귀선</a></li>
+<li class="chapter" data-level="1.1.6" data-path="index.html"><a href="index.html#데이타마이닝-학급데이타-정리"><i class="fa fa-check"></i><b>1.1.6</b> 데이타마이닝: 학급데이타 정리</a></li>
+<li class="chapter" data-level="1.1.7" data-path="index.html"><a href="index.html#대학에서-모집요강-가져오기-데이타-크롤링"><i class="fa fa-check"></i><b>1.1.7</b> 대학에서 모집요강 가져오기: 데이타 크롤링</a></li>
+<li class="chapter" data-level="1.1.8" data-path="index.html"><a href="index.html#내신과-수시합격자를-상자그림으로-그리기"><i class="fa fa-check"></i><b>1.1.8</b> 내신과 수시합격자를 상자그림으로 그리기</a></li>
+<li class="chapter" data-level="1.1.9" data-path="index.html"><a href="index.html#수능응시자를-재학생과-졸업생으로-나누어-그리기-area그래프"><i class="fa fa-check"></i><b>1.1.9</b> 수능응시자를 재학생과 졸업생으로 나누어 그리기: area그래프</a></li>
+<li class="chapter" data-level="1.1.10" data-path="index.html"><a href="index.html#수능응시자-재학생-재수생-응시비율-그래프"><i class="fa fa-check"></i><b>1.1.10</b> 수능응시자 재학생, 재수생 응시비율 그래프</a></li>
+<li class="chapter" data-level="1.1.11" data-path="index.html"><a href="index.html#수시정시-모집비율-수시와-정시를-각각-선그래프로-그리기"><i class="fa fa-check"></i><b>1.1.11</b> 수시정시 모집비율: 수시와 정시를 각각 선그래프로 그리기</a></li>
+<li class="chapter" data-level="1.1.12" data-path="index.html"><a href="index.html#수능-재학재수생-응시비율그래프와-수시정시-모집비율을-함께patchwork-라이브러리-이용"><i class="fa fa-check"></i><b>1.1.12</b> 수능 재학,재수생 응시비율그래프와 수시정시 모집비율을 함께:patchwork 라이브러리 이용</a></li>
+<li class="chapter" data-level="1.1.13" data-path="index.html"><a href="index.html#수능탐구과목-표준점수-만점과-응시자수-그래프"><i class="fa fa-check"></i><b>1.1.13</b> 수능탐구과목 표준점수 만점과 응시자수 그래프</a></li>
+<li class="chapter" data-level="1.1.14" data-path="index.html"><a href="index.html#수능탐구과목-표준점수-만점과-응시자수-그래프에서-사탐과-과탐을-구분하여-그리기"><i class="fa fa-check"></i><b>1.1.14</b> 수능탐구과목 표준점수 만점과 응시자수 그래프에서 사탐과 과탐을 구분하여 그리기</a></li>
+<li class="chapter" data-level="1.1.15" data-path="index.html"><a href="index.html#수능최저등급-변화로-합격자-감소를-강조하는-화살표-그리기"><i class="fa fa-check"></i><b>1.1.15</b> 수능최저등급 변화로 합격자 감소를 강조하는 화살표 그리기</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#중급"><i class="fa fa-check"></i><b>1.2</b> 중급</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#단순-막대그래프를-이용한-대학-합격자-그래프"><i class="fa fa-check"></i><b>1.2.1</b> 단순 막대그래프를 이용한 대학 합격자 그래프</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#누적-막대그래프를-이용한-대학-합격자-그래프"><i class="fa fa-check"></i><b>1.2.2</b> 누적 막대그래프를 이용한 대학 합격자 그래프</a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#클리브랜드-그래프로-대학-합격자-정시수시-합격자-그래프"><i class="fa fa-check"></i><b>1.2.3</b> 클리브랜드 그래프로 대학 합격자 정시수시 합격자 그래프</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#대학합격자를-수시와-정시로-나누기-facet를-이용"><i class="fa fa-check"></i><b>1.2.4</b> 대학합격자를 수시와 정시로 나누기: facet를 이용</a></li>
+<li class="chapter" data-level="1.2.5" data-path="index.html"><a href="index.html#음양그래프를-이용한-2개년-대학-합격자-그래프"><i class="fa fa-check"></i><b>1.2.5</b> 음양그래프를 이용한 2개년 대학 합격자 그래프</a></li>
+<li class="chapter" data-level="1.2.6" data-path="index.html"><a href="index.html#지도위에-표시하는-대학합격자수"><i class="fa fa-check"></i><b>1.2.6</b> 지도위에 표시하는 대학합격자수</a></li>
+<li class="chapter" data-level="1.2.7" data-path="index.html"><a href="index.html#트리맵treemap으로-그리는-대학합격자-그래프"><i class="fa fa-check"></i><b>1.2.7</b> 트리맵(treemap)으로 그리는 대학합격자 그래프</a></li>
+<li class="chapter" data-level="1.2.8" data-path="index.html"><a href="index.html#수시에-정시까지-센키sankey그래프"><i class="fa fa-check"></i><b>1.2.8</b> 수시에 정시까지: 센키(Sankey)그래프</a></li>
+<li class="chapter" data-level="1.2.9" data-path="index.html"><a href="index.html#출생자수와-출산율-그리기-y축이-2개인-듀얼그래프"><i class="fa fa-check"></i><b>1.2.9</b> 출생자수와 출산율 그리기: y축이 2개인 듀얼그래프</a></li>
+<li class="chapter" data-level="1.2.10" data-path="index.html"><a href="index.html#개이상의-그래프를-한-페이지에-그리기-gridextra-라이브러리"><i class="fa fa-check"></i><b>1.2.10</b> 3개이상의 그래프를 한 페이지에 그리기: gridExtra 라이브러리</a></li>
+<li class="chapter" data-level="1.2.11" data-path="index.html"><a href="index.html#수시-전형별-합불-반응형-그래프-상자그림"><i class="fa fa-check"></i><b>1.2.11</b> 수시 전형별 합불 반응형 그래프: 상자그림</a></li>
+<li class="chapter" data-level="1.2.12" data-path="index.html"><a href="index.html#수시-5가지를-보여주는-반응형-그래프상자그림과-label-이용"><i class="fa fa-check"></i><b>1.2.12</b> 수시 5가지를 보여주는 반응형 그래프:상자그림과 label 이용</a></li>
+<li class="chapter" data-level="1.2.13" data-path="index.html"><a href="index.html#수업-내용분석-물리과를-예시로"><i class="fa fa-check"></i><b>1.2.13</b> 수업 내용분석: 물리과를 예시로</a></li>
+<li class="chapter" data-level="1.2.14" data-path="index.html"><a href="index.html#연관규칙-찾기"><i class="fa fa-check"></i><b>1.2.14</b> 연관규칙 찾기</a></li>
+<li class="chapter" data-level="1.2.15" data-path="index.html"><a href="index.html#시험문제-문항분석"><i class="fa fa-check"></i><b>1.2.15</b> 시험문제 문항분석</a></li>
+<li class="chapter" data-level="1.2.16" data-path="index.html"><a href="index.html#학생별-정기고사-선택과목-리스트를-만들기"><i class="fa fa-check"></i><b>1.2.16</b> 학생별 정기고사 선택과목 리스트를 만들기</a></li>
+<li class="chapter" data-level="1.2.17" data-path="index.html"><a href="index.html#선호대학-선호학과-워드클라우드"><i class="fa fa-check"></i><b>1.2.17</b> 선호대학, 선호학과 워드클라우드</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#고급"><i class="fa fa-check"></i><b>1.3</b> 고급</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#영어과-수행평가-텍스트분석"><i class="fa fa-check"></i><b>1.3.1</b> 영어과 수행평가 텍스트분석</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#생활기록부-행동특성-및-종합의견-워드-클라우드"><i class="fa fa-check"></i><b>1.3.2</b> 생활기록부 행동특성 및 종합의견 워드 클라우드</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#생활기록부-행동특성-및-종합의견-토픽-모델링"><i class="fa fa-check"></i><b>1.3.3</b> 생활기록부 행동특성 및 종합의견 토픽 모델링</a></li>
+<li class="chapter" data-level="1.3.4" data-path="index.html"><a href="index.html#학교부적응학생-판별"><i class="fa fa-check"></i><b>1.3.4</b> 학교부적응학생 판별</a></li>
+<li class="chapter" data-level="1.3.5" data-path="index.html"><a href="index.html#머신러닝의-비지도학습-군집분석을-이용한-000"><i class="fa fa-check"></i><b>1.3.5</b> 머신러닝의 비지도학습: 군집분석을 이용한 000</a></li>
+<li class="chapter" data-level="1.3.6" data-path="index.html"><a href="index.html#kaist-서류전형-합격-예측모델"><i class="fa fa-check"></i><b>1.3.6</b> KAIST 서류전형 합격 예측모델</a></li>
+<li class="chapter" data-level="1.3.7" data-path="index.html"><a href="index.html#서울대-서류전형-합격-예측모델"><i class="fa fa-check"></i><b>1.3.7</b> 서울대 서류전형 합격 예측모델</a></li>
+<li class="chapter" data-level="1.3.8" data-path="index.html"><a href="index.html#구조방정식-모형을-이용한-000"><i class="fa fa-check"></i><b>1.3.8</b> 구조방정식 모형을 이용한 000</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> 준비사항</a></li>
+<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R로해 진학지도</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="applications" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Applications</h1>
+<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
+<div id="example-one" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Example one</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="applications.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr, ggplot2)</span>
+<span id="cb1-2"><a href="applications.html#cb1-2" aria-hidden="true" tabindex="-1"></a>plots <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb1-3"><a href="applications.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">split</span>(.<span class="sc">$</span>cyl) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-4"><a href="applications.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(<span class="sc">~</span><span class="fu">ggplot</span>(.x, <span class="fu">aes</span>(mpg, wt)) <span class="sc">+</span> <span class="fu">geom_point</span>())</span>
+<span id="cb1-5"><a href="applications.html#cb1-5" aria-hidden="true" tabindex="-1"></a>paths <span class="ot">&lt;-</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="fu">names</span>(plots), <span class="st">&quot;.pdf&quot;</span>)</span>
+<span id="cb1-6"><a href="applications.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">pwalk</span>(<span class="fu">list</span>(paths, plots), ggsave, <span class="at">path =</span> <span class="fu">tempdir</span>())</span></code></pre></div>
+</div>
+<div id="example-two" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Example two</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="applications.html#cb2-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(purrr, dplyr, ggplot2)</span>
+<span id="cb2-2"><a href="applications.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="applications.html#cb2-3" aria-hidden="true" tabindex="-1"></a>plots <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="applications.html#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">split</span>(.<span class="sc">$</span>cyl) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="applications.html#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(<span class="sc">~</span><span class="fu">ggplot</span>(.x, <span class="fu">aes</span>(mpg, wt)) <span class="sc">+</span> <span class="fu">geom_point</span>())</span>
+<span id="cb2-6"><a href="applications.html#cb2-6" aria-hidden="true" tabindex="-1"></a>paths <span class="ot">&lt;-</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="fu">names</span>(plots), <span class="st">&quot;.pdf&quot;</span>)</span>
+<span id="cb2-7"><a href="applications.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pwalk</span>(<span class="fu">list</span>(paths, plots), ggsave, <span class="at">path =</span> <span class="fu">tempdir</span>())</span></code></pre></div>
+<pre><code>## Saving 7 x 5 in image
+## Saving 7 x 5 in image
+## Saving 7 x 5 in image</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book_2021.pdf", "book_2021.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

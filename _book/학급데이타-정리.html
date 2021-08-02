@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 학급데이타 정리 | 교사가 알아야 할 R</title>
+  <meta name="description" content="이책은 선생님들을 위한 R입문서입니다." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 학급데이타 정리 | 교사가 알아야 할 R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="이책은 선생님들을 위한 R입문서입니다." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 학급데이타 정리 | 교사가 알아야 할 R" />
+  
+  <meta name="twitter:description" content="이책은 선생님들을 위한 R입문서입니다." />
+  
+
+<meta name="author" content="황성삼" />
+
+
+<meta name="date" content="2021-07-31" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="r과-rstudio설치.html"/>
+<link rel="next" href="내신등급-변화-그래프.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 목차</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> 서문</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#한줄-추천사"><i class="fa fa-check"></i><b>2.1</b> 한줄 추천사</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#저자서문"><i class="fa fa-check"></i><b>2.2</b> 저자서문</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#대상과-목적"><i class="fa fa-check"></i><b>2.3</b> 대상과 목적</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#종이책과-ebook"><i class="fa fa-check"></i><b>2.4</b> 종이책과 ebook</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r과-rstudio설치.html"><a href="r과-rstudio설치.html"><i class="fa fa-check"></i><b>3</b> R과 RStudio설치</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="r과-rstudio설치.html"><a href="r과-rstudio설치.html#r에-필요한-컴퓨터-사양"><i class="fa fa-check"></i><b>3.1</b> R에 필요한 컴퓨터 사양</a></li>
+<li class="chapter" data-level="3.2" data-path="r과-rstudio설치.html"><a href="r과-rstudio설치.html#컴퓨터-사양-확인하는-법"><i class="fa fa-check"></i><b>3.2</b> 컴퓨터 사양 확인하는 법</a></li>
+<li class="chapter" data-level="3.3" data-path="r과-rstudio설치.html"><a href="r과-rstudio설치.html#컴퓨터명을-영문으로-바꾸기"><i class="fa fa-check"></i><b>3.3</b> 컴퓨터명을 영문으로 바꾸기</a></li>
+<li class="chapter" data-level="3.4" data-path="r과-rstudio설치.html"><a href="r과-rstudio설치.html#폴더명을-한글로-바꾸기"><i class="fa fa-check"></i><b>3.4</b> 폴더명을 한글로 바꾸기</a></li>
+<li class="chapter" data-level="3.5" data-path="r과-rstudio설치.html"><a href="r과-rstudio설치.html#r-설치"><i class="fa fa-check"></i><b>3.5</b> R 설치</a></li>
+<li class="chapter" data-level="3.6" data-path="r과-rstudio설치.html"><a href="r과-rstudio설치.html#rstudio-설치"><i class="fa fa-check"></i><b>3.6</b> RStudio 설치</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="학급데이타-정리.html"><a href="학급데이타-정리.html"><i class="fa fa-check"></i><b>4</b> 학급데이타 정리</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="학급데이타-정리.html"><a href="학급데이타-정리.html#rstudio-시작하기"><i class="fa fa-check"></i><b>4.1</b> RStudio 시작하기</a></li>
+<li class="chapter" data-level="4.2" data-path="학급데이타-정리.html"><a href="학급데이타-정리.html#파일-부르기"><i class="fa fa-check"></i><b>4.2</b> 파일 부르기</a></li>
+<li class="chapter" data-level="4.3" data-path="학급데이타-정리.html"><a href="학급데이타-정리.html#파일-검색하기"><i class="fa fa-check"></i><b>4.3</b> 파일 검색하기</a></li>
+<li class="chapter" data-level="4.4" data-path="학급데이타-정리.html"><a href="학급데이타-정리.html#엑셀파일-vs.-csv파일"><i class="fa fa-check"></i><b>4.4</b> 엑셀파일 vs. CSV파일</a></li>
+<li class="chapter" data-level="4.5" data-path="학급데이타-정리.html"><a href="학급데이타-정리.html#명령어-인터페이스cli-vs.-그래픽-사용자-인터페이스gui"><i class="fa fa-check"></i><b>4.5</b> 명령어 인터페이스(CLI) vs. 그래픽 사용자 인터페이스(GUI)</a></li>
+<li class="chapter" data-level="4.6" data-path="학급데이타-정리.html"><a href="학급데이타-정리.html#r-vs.-파이썬"><i class="fa fa-check"></i><b>4.6</b> R vs. 파이썬</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="내신등급-변화-그래프.html"><a href="내신등급-변화-그래프.html"><i class="fa fa-check"></i><b>5</b> 내신등급 변화 그래프</a></li>
+<li class="chapter" data-level="6" data-path="내신과-수능과의-상관관계.html"><a href="내신과-수능과의-상관관계.html"><i class="fa fa-check"></i><b>6</b> 내신과 수능과의 상관관계</a></li>
+<li class="chapter" data-level="7" data-path="내신과-수능의-회귀선.html"><a href="내신과-수능의-회귀선.html"><i class="fa fa-check"></i><b>7</b> 내신과 수능의 회귀선</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="내신과-수능의-회귀선.html"><a href="내신과-수능의-회귀선.html#example-one"><i class="fa fa-check"></i><b>7.1</b> Example one</a></li>
+<li class="chapter" data-level="7.2" data-path="내신과-수능의-회귀선.html"><a href="내신과-수능의-회귀선.html#example-two"><i class="fa fa-check"></i><b>7.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="igraph를-활용한-생기부자료-정리.html"><a href="igraph를-활용한-생기부자료-정리.html"><i class="fa fa-check"></i><b>8</b> igraph를 활용한 생기부자료 정리</a></li>
+<li class="chapter" data-level="9" data-path="igraph를-활용한-교우관계.html"><a href="igraph를-활용한-교우관계.html"><i class="fa fa-check"></i><b>9</b> igraph를 활용한 교우관계</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">교사가 알아야 할 R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="학급데이타-정리" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> 학급데이타 정리</h1>
+<div id="rstudio-시작하기" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> RStudio 시작하기</h2>
+<p>이제 힘들게 설치한 R과 RStudio를 돌려보자. 윈도우 그림을 클릭해서 RStudio를 찾자. RStudio폴더를 클릭하면 동그란 파란색 배경의 RStudio 아이콘이 뜬다. 사정없이 클릭하자~ 그러면 RStudio가 위풍당당하게 뜬다. 처음에 RStudio 첫화면을 보면 “왜 이렇게 복잡해?”할 수도 있다. 아래한글, 엑셀화면만 보다가 세개로 분할된 창을 보면 <em>마이</em> 당황할 수 있다. 에러난거 아니니 격정마시길!</p>
+<div class="figure" style="text-align: left"><span id="fig:rlogo"></span>
+<img src="img/startled.png" alt="그림출처: http://clipart-library.com/clipart/14075.htm" width="10%" />
+<p class="caption">
+Figure 4.1: 그림출처: <a href="http://clipart-library.com/clipart/14075.htm" class="uri">http://clipart-library.com/clipart/14075.htm</a>
+</p>
+</div>
+<p>RStudio 화면이 너무 복잡하다고 생각되면 잠시 학교 나이스(NEIS) 프로그램을 열어보자. 캡처사진처럼 사실 교육부 나이스 화면도 여러개 창으로 돼있다. 중앙의 메뉴바를 기준으로 왼쪽부터 ‘세부메뉴,’ 오른쪽에 ‘추진일정,’ ‘학교일지/전달사항,’ ’업무요청내역’이 있다. 우리도 모르는 사이 4개의 창이 있는 컴퓨터 프로그램을 매일 쓰고 있었다~</p>
+<p>캡처사진: 나이스</p>
+<p>다시 RStudio화면으로 돌아오자. 다음 캡처사진을 보면 왼쪽 큰창이 콘솔(Console)창이다. 오른쪽 위쪽이 작업환경(Environment)창이고, 그 아랫쪽이 파일(Files)창이다. 콘솔창안의 오른쪽 텝 막대기를 보면 빗자루 그림이 있다. 바로 그 빗자루 옆에 겹쳐진 네모 두개가 있다. 거길 클릭하자!</p>
+<p>캡처사진: RStudio RStudio screen</p>
+<p>그러면 untitled라는 새로운 창이 뜬다. 이곳이 우리가 마르고 닯도록 작업할 창이다. 보통 텍스트 에디터(text editor)라 부르면 곳으로 여기서 코드를 입력한다. 그러면 결과가 콘솔창에 뜬다. 텍스트 에디터 창이 뜨면 RStudio에 네개의 창이 뜬다. 그래서 처음에만 세개의 창으로 보이지 실제 코딩할때는 다음 네개의 창이 항상 떠 있다.</p>
+<ul>
+<li>왼쪽창
+** 텍스트 에디터(text editor) : 코드를 입력하는 곳
+** 콘솔창(Console): 코드의 결과가 뜨는 곳</li>
+<li>오늘쪽창
+** 작업환경(Environment)창
+** 파일(Files)창</li>
+</ul>
+<p>드디어 대망의 R코드를 입력할 시간이다! 둥둥둥~ 고심끝에 <code>install.packages("readxl")</code>로 결정했다. 뭔지 모르지만 무조건 입력해보자. 그러면 뭔지 모르는 또 다른 파일들이 왼쪽 콘솔창에 주루루 설치된다. <code>failed</code>라는 메시지가 뜨지 않았다면 성공이다.</p>
+<p>명령어를 풀이해 보자. install라는 뭔가를 설치한다는 뜻이고, packages는 꾸러미라는 뜻이다. readxl은 왠지 글자는 아닌데 엑셀(Excel)같은 냄새가 난다. “코드꾸러미를 설치했다”라고 얘기하면 충분하다.</p>
+<p>그럼 readxl의 뜻은?</p>
+<p>xl은 Excel의 옛 확장자 이름이다.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> 그러면 답 나왔네~ readxl은 엑셀파일을 읽는다는 뜻이다.</p>
+<blockquote>
+<p>파일 하나 읽는데 뭐 이래 번잡스러워?</p>
+</blockquote>
+<p>아이콘을 클릭하는 프로그램을 쓰다가 명령어를 입력하는 프로그램을 쓰면 맨붕이 온다. 나도 그랬다. 전문용어로 아이콘 환경을 그래픽 사용자 인터페이스(Graphical User Interface: GUI) 방식이라 한다. 반면 명령어를 치는 R같은 방식은 명령어 인터페이스(Command-line Interface: CLI)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>라 한다.</p>
+<p>마찬가지로 <code>install.packages("readxl")</code> 뭔지 모르겠지만 readxl이라는 코드꾸러미를 컴퓨터에 설치한다는 뜻으로 이해했다면 충분하다.</p>
+<ul>
+<li>install.packages(“readxl”)</li>
+</ul>
+<p>readxl패키지를 설치한 다음, library(readxl)라는 다음 명령어를 치자.</p>
+<p>install.packages(“readxl”)가 readxl이라는 패키지를 설치했다면, library(readxl)은 readxl을 활성화시키는 것이다. install 명령어가 readxl의 서고를 만들었다면 library는 그책을 꺼내는 것이다.</p>
+</div>
+<div id="파일-부르기" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> 파일 부르기</h2>
+<p>이제 엑셀 데이타파일을 불러보자. R에서 엑셀파일을 부르는 방법은 두 가지이다. 하나는 아이콘 메뉴를 쓰는 쉬운 방법이다. 또 하나는 명령어를 치는 어려운 방법이다.</p>
+<blockquote>
+<p>“이 사람아 꽃길 놔두고 가시밭길 갈 필요는 없다고 보오~”</p>
+</blockquote>
+<p>악마의 달콤한 유혹같지만, 초보자는 쉬은 방법을 써도 된다. RStudio 오른쪽 사용환경(Environment)창을 보면 ’Iport Dataset’이란 버튼이 눌러 다음순서데로 실행한다.</p>
+<ul>
+<li>쉬운 방법</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Environment</li>
+<li>Import Dataset</li>
+<li>From Excel</li>
+<li>Browse</li>
+<li>파일선택</li>
+<li>Import</li>
+</ol>
+<p>’Browse’을 누르면 파일이 있는 폴더를 선택하라고 한다. 이 GUI화면은 선생님들에게 익숙할 것이다. 까잇것 이정도쯤이야! Import누르면 그러면 다음과 같이 엑셀파일 자료가 뜬다. 혹 엑셀화면과 똑같은 화면을 기대해서 당황하셨나 모르겠다.</p>
+<p>캡처: Import Dataset화면</p>
+<ul>
+<li>어려운 방법</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="학급데이타-정리.html#cb1-1" aria-hidden="true" tabindex="-1"></a>english <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;H:</span><span class="sc">\\</span><span class="st">rdata</span><span class="sc">\\</span><span class="st">english.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&#39;survey&#39;</span>)</span></code></pre></div>
+<p>쉬운방법이 메뉴 클릭방식인 GUI라면, 어려운 방법은 명령어를 치는 방식이다. 명령어를 치는 것 까지만 해볼 만한데, 경로를 쓰고, sheet를 고르는게 부담스럽다. 필자도 그랬다. 그래서 R입문하고 한 1~2년간은 메뉴 클릭하는 방식을 썼다. 그러다 그게 숙달됐을때 직접 명령어를 쳐서 파일을 부르기 시작했다. 메뉴클릭이든 명령어입력이든 모로 가도 서울만 가면 된다~</p>
+<p>주의사항 하나! 경로를 표시할때 ‘\’가 아니라’\’ 로 표시하는 이유가 있다. 경로표시 ‘'가 메타문자가 아니라 글자그래의’'란 뜻으로 ’\’로 표시한다. 설명하니까 더 헷깔리나요? 비싼말로 정규식(Regualr expression: Regex)이라고 부르는 포로그램 문자열(string) 문법의 하나이다.</p>
+<p>어떤 선생님은 “명령어 방식이 더 쉬운거 아냐?” 반문할 수 있다. 맞다! 명령어방식이 익숙해지면 이게 더 쉽다. 게다가 코드를 기록하는 측면에서는 명령어방식이 더 좋다.</p>
+<p>이제 어려운 방법과 쉬운 방법으로 엑셀파일을 불렀으니 내용물을 살펴보자.</p>
+</div>
+<div id="파일-검색하기" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> 파일 검색하기</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="학급데이타-정리.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(english)</span></code></pre></div>
+<pre><code># A tibble: 6 x 43
+     반  번호 이름   성별  영어_중간_1학기 영어_기말_1학기 거주구
+  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;           &lt;dbl&gt;  &lt;dbl&gt;
+1     5     1 권순형 여               90.4            93.4      1
+2     5     2 김승은 여               33.8            32.7      1
+3     5     3 김신정 여               50.4            42.2      1
+4     5     4 김예경 여               83.6            82.2      1
+5     5     5 김윈   남               10.8            27.3      1
+6     5     7 김지환 남               13.7             8.3      3
+# ... with 36 more variables: 일학년2학기영어내신 &lt;dbl&gt;,
+#   일학년영어수능등급 &lt;dbl&gt;, 영어강점 &lt;dbl&gt;, 영어약점 &lt;dbl&gt;,
+#   필요한영어공부 &lt;dbl&gt;, 내신목표등급 &lt;dbl&gt;, 수능목표등급 &lt;dbl&gt;,
+#   영어사교육종류 &lt;chr&gt;, 영어사교육횟수 &lt;dbl&gt;, 단어찿기방법 &lt;dbl&gt;,
+#   교사의영어사용량 &lt;dbl&gt;, 필요한영어방과후 &lt;dbl&gt;, 영어권국가거주 &lt;dbl&gt;,
+#   비영어권국가국제학교 &lt;dbl&gt;, 소셜미디어 &lt;dbl&gt;, 즐겨보는영어방송 &lt;dbl&gt;,
+#   교과서효과성 &lt;dbl&gt;, 한단어씩읽음 &lt;dbl&gt;, 한국어풀이보기 &lt;dbl&gt;,
+#   파생어활용 &lt;dbl&gt;, 다른표현으로유추 &lt;dbl&gt;, 문맥고려 &lt;dbl&gt;, 지시어파악 &lt;dbl&gt;,
+#   어원 &lt;dbl&gt;, 바로사전찾기 &lt;dbl&gt;, 이야기책경험 &lt;dbl&gt;, 건강 &lt;dbl&gt;,
+#   학교생활 &lt;dbl&gt;, 학교밖생활 &lt;dbl&gt;, 스트레스해소법 &lt;dbl&gt;, 진로가있음 &lt;dbl&gt;,
+#   적절한스마트폰 &lt;dbl&gt;, 친구관계 &lt;dbl&gt;, 친구여부 &lt;dbl&gt;, 교사와의관계 &lt;dbl&gt;,
+#   부모와대화 &lt;dbl&gt;</code></pre>
+<p>파일을 검색하는 방법은 크게 2가지이다. head()는 파일의 앞쪽 데이타 5개를 부르고, tail()은 뒷쪽 5개를 부른다. english라는 데이타셋을 head()로 검색하면 반, 번호, 이름, 성별 등이 뜬다. 이제 여러분들은 데이타과학에 입문한 것이다. 외부 데이타파일을 불러다가 여러분의 컴퓨터에서 R로 검색했기 때문이다~ 빅데이타 시대인데 이렇게 작 데이터분석를 검새해도 되냐고 하는 선생님들이 계실수도 있다.</p>
+<p>이에 대해 R의 전설적 인물인 위컴과 그롤몬드는 ’R을 활용한 데이터과학’에서 다음과 같이 대답했다.</p>
+<blockquote>
+<p>자신들의 책은 자랑스럽게 메모리기반 스몰 데이타를 집중적으로 다룬다. 왜냐하면 작은 데이타를 다뤄봐야 빅데이타도 분석할 수 있기 때문이다.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+</blockquote>
+<p>다시 english파일 분석으로 돌아오자. 혹시 설문을 빼먹은 학생이 있는지 확인하자. 엑셀데이타셋에서 구멍이 송송 뚫린 칸(cell)을 통계용어로 결측값이라 부른다. R에서 결측값은 사용할 수 없다는 뜻의 Not Available의 약자 na라고 부른다.</p>
+<p>is.na() 명령어는 “ns가 있나요?”라는 영어문장처럼 들린다. 결측값이 있으면 결과가 TRUE, 결측값이 없으면 FALSE로 나온다. 다행이 결측값이 0으로 나온다. 그럼 이번에는 설문응답을 하지 않은 결측값이 몇개인지 본다.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="학급데이타-정리.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(english))</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<p>is.na() 명령어를 합계라는 뜻의 sum()으로 둘러싸면 “결측값이 몇개인가요?”라는 뜻의 명령어가 된다. 결과는 0으로 나온다. 결측값의 갯수의 총합이 0이라는 뜻이다.</p>
+<p>그러면 이번에는 엑셀 데이타셋의 열(colummn)로 결측값이 있는지 확인해 보자. 보통 데이타셋의 열은 데이타의 변수들이 되고, 가로인 행(row)는 관측치가 된다. is.na(english)를 colSums()이라는 명령어로둘러싸면 된다. 그러면 다음과 같이 각 열별로 결과가 나온다.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="학급데이타-정리.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(english))</span></code></pre></div>
+<pre><code>##                   반                 번호                 이름 
+##                    0                    0                    0 
+##                 성별      영어_중간_1학기      영어_기말_1학기 
+##                    0                    0                    0 
+##               거주구  일학년2학기영어내신   일학년영어수능등급 
+##                    0                    0                    0 
+##             영어강점             영어약점       필요한영어공부 
+##                    0                    0                    0 
+##         내신목표등급         수능목표등급       영어사교육종류 
+##                    0                    0                    0 
+##       영어사교육횟수         단어찿기방법     교사의영어사용량 
+##                    0                    0                    0 
+##     필요한영어방과후       영어권국가거주 비영어권국가국제학교 
+##                    0                    0                    0 
+##           소셜미디어     즐겨보는영어방송         교과서효과성 
+##                    0                    0                    0 
+##         한단어씩읽음       한국어풀이보기           파생어활용 
+##                    0                    0                    0 
+##     다른표현으로유추             문맥고려           지시어파악 
+##                    0                    0                    0 
+##                 어원         바로사전찾기         이야기책경험 
+##                    0                    0                    0 
+##                 건강             학교생활           학교밖생활 
+##                    0                    0                    0 
+##       스트레스해소법           진로가있음       적절한스마트폰 
+##                    0                    0                    0 
+##             친구관계             친구여부         교사와의관계 
+##                    0                    0                    0 
+##           부모와대화 
+##                    0</code></pre>
+<p>이 역시 결과는 모두 0으로 나온다. 서문에서 밝혔듯이 연습용 데이타가 모두 가상데이타이기 때문에 첫 데이타 분석 연습파일에는 english에는 결측값이 없게 만들었다. 검색 명령어들을 처음 배우는 데 처음부터 결측값 제거 명령어까지 포함시키면 너무 어려울 것 같아 뺐다. 데이타에 결측값이 있으면 검색명령어에 결측값을 제거하고 검색한다는 명령어를 추가로 넣어야 검색이 된다. <em>독자들의 수준을 너무 무시한 건 아니죠?</em></p>
+</div>
+<div id="엑셀파일-vs.-csv파일" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> 엑셀파일 vs. CSV파일</h2>
+<p>학교에서 여러가지 숫자가 모여있는 데이타라는 엑셀이다.이런 데이타파일을 비싼 말로 데이타셋(dataset)이라 부른다. 말그래로 데이타가 여러개 모여있는 집합(set)이라는 뜻이다.
+엑셀은 세계에서 가장 많이 사용되는 통계프로그램이다. 통계프로그램이라고 의식 못할 정도로 대중화돼 있다.</p>
+</div>
+<div id="명령어-인터페이스cli-vs.-그래픽-사용자-인터페이스gui" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> 명령어 인터페이스(CLI) vs. 그래픽 사용자 인터페이스(GUI)</h2>
+<p>다음 장 넘어가기 전에 명령어 인터페이스(CLI)와 GUI에 대해 잠시 이바구를 풀어야 겠다. 혹 연식이 50대이상 되는 경력교사들은 개인용 컴퓨터가 도입되기 시작한 90년대때 잠시 나왔던 DOS시스템을 기억할거다. DOS는 Disk Operating System의 약자다. 명령어입력 방식으로 작동됐던 운영체제다. 당시 DOS가 얼마나 유명했는지 캠브리지 영어사전에 신조어로 등재됐을 정도다.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>이후 GUI방식을 쓰는 윈도우 바람이 불어 DOS는 바람과 함께 사라진다. 흡사 라틴어가 사라진 언어같지만 영어속에 살아숨쉬는 것처럼 DOS도 윈도우안에서 CMD모드로 살아있다. 아래 사진을 보면 “아 이거!”라고 다들 한번씩 윈도우에 본 화면일 것이다. CMD는 command의 약자다. 학교 컴퓨터 유지보수 업체 기사님들이 까만 윈도우 CMD 모드를 작업하는 모습을 보면 전문가처럼 보일 정도다. 아참 윈도우10에서 CMD모드를 여는 단축키가 키보드의 윈도우그림키 + R이란 사실~</p>
+<p>다음장으로 넘어가지 않고, 뜬금없이 그래픽 사용자 인터페이스(GUI)와 명령어 인터페이스(CLI)를 설명한 이유는 R이 CLI방식을 쓰기때문에 어렵게 느낄 수 있다는 것이다. 대학원에서 SPSS 통계프로그램을 배웠던 분들도 명령어 인터페이스 방식의 통계프로그램으로 넘어오는데 높은 진입장벽이 된다. 선생님들께서 지금 잘 따라오고 계시다는 얘기다.</p>
+</div>
+<div id="r-vs.-파이썬" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> R vs. 파이썬</h2>
+<p>R과 파이썬 중 누가 쌘 데이타분석 강자냐? 인생이 게임이라 그런지 사람들은 호사가들의 질문에 혹한다. 마치 “슈퍼맨과 베트맨이 싸우면 누가 이기냐”라고 어렸을때 진지하게 남자애들이 했던 질문같다. 파이썬 역시 R과 더불어 전세계적으로다가 무지 핫하다. 결론부터 말하면 슈퍼맨이 배트맨을 이긴다. 배트맨이 슈퍼맨을 이길 수 없듯이 R이 프로그래밍 확장성면에서 파이썬을 이길 수는 없다.</p>
+<p>크립톤 행성이라는 외계 출신인 슈퍼맨과 지구인 출신 베트맨은 출신자체가 달라 갖고 있는 초능력의 클래스가 다르다. 마찬가지로 네델란드 프로그래머가 만든 파이썬과 뉴질랜드 통계학 교수가 만든 R은 태생부터 달라 그 능력치가 다르다. 둘다 데이타분석의 빅히어로지만 R과 파이썬은 같은 듯 다르다.</p>
+<p>R을 통계학과 교수 2명이 공동으로 만들었으니 얼마나 통계에 특화되었겠는가? 반면 Python은 전문 프로그래머의 취미로 우발적으로 탄생한 범용 프로그램이다. 범용 프로그램은 말그대로 여러가지 일을 할 수 있다는 뜻이다. 통계에 특화되서 탄생한 R과 일반 프로그래밍 언어로 탄생한 파이썬의 태생적 차이가 나타날 수 밖에 없다. 이쯤되면 예리한 독자가 한마디 할 수 있다.</p>
+<blockquote>
+<p>파이썬을 가르치지? 왜 R을 가르치냐?</p>
+</blockquote>
+<p>3가지 정도다. 하나. 그래프 기능이 좋다. 둘. 통계적 모형 개발에 용이하다. 셋. 다양한 통계패키지들이 많다. Coursera라는 온라인 코딩 교육사이트에 나오는 얘기다.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<p>여기다가 필자의 경험을 더 한다면 R이 배우기가 더 쉽다. 통계학을 배운 사람들이 R이 배우기 더 쉽고, 반면 C++, 자바(Java)를 배운 사람들은 파이썬이 오히려 배우기 더 쉽다고 한다. 그래서 그런지 고등학교 정보시간에 파이썬 기초를 가르치고 파이썬을 대학 교양과목으로 가르친다. 예전 교양영어처럼 말이다. 대학 컴퓨터학과에서 C, Java를 배우기전 교육과정으로 편성하는 듯 하다. R은 주로 대학 통계학과에서 가르치고, 과목에 따라서 선별적으로 R을 가르친다. 예를 들어 문헌정보학과에서 텍스트분석 강의를 할때 R을 가르친다.</p>
+<blockquote>
+<p>R이냐? 파이썬이냐?</p>
+</blockquote>
+<p>한번쯤 해볼 수 있는 질문이지만 현업에서는 파이썬과 R을 둘다 사용한다고 한다. 먼저 배우고 나중에 배우는 차이다. 그러므로 “데이타분석 하기위해 R을 배워야 하는냐? 파이썬을 배워야 하느냐?” 는 그닥 생산적인 논쟁은 아니다. 알고보면 말이다~</p>
+<p>인기도로 치면 파이썬이 R은 능가한다. TIOBE, Stack Overflow, PYPL, RedMonk에 따르면 말이다. 이렇게 되는 이유는 한 2가지 정도. 파이썬이 프로그래밍 친화적이고, C를 학부에서 배우는 전산과 출신들에게 파이썬이 더 쉽다. 파이썬이 C를 단순화한 언어같다고 한다. 정보컴퓨터 선생님 말씀에 따르면 말이다. 짧은 내 파이썬 실력으로 봐도 C와 매우 비슷하다.</p>
+<p>여하튼 파이썬보다는 덜 하지만 R도 기존의 유명한 통계프로그램 강자 SPSS나 SAS에 비해서는 확장성이 크다. SPSS가 하기 힘든 지도그리기, 텍스트 분석, 구조방정식모형 등을 R이 할 수 있다. 하지만 파이썬보다는 확장성이 적은 건 사실이다. 현재론선 말이다. 이쯤에서 성질급한 앞자리 선생님께서 “R책에서 무슨 파이썬 이야기를 이리도 길게해?”라고 하길 같아 마무리한다. 일부독자의 어그로에도 불구하고 파이썬은 R책에서도 소개할 가치가 있는 훌륭한 데이타분석 프로그램이다. 파이썬의 인기는 전세계 데이타분석 인기투표에서 톱5위에 안에 드는 언어다<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<p>TIOBE 단체의 이름이 재미있어 언급한다. TIOBE는 정직함의 중요성(The Importance of Being Earnest)의 약자다. 프로그래머들이 낭만을 좀 아는게… 이게 ’도리안 그레이의 초상’으로 유명한 아일랜드의 작가 오스카(Oscar Wilde)의 코메디 작품에 이름을 땄다. TIOBE는 매년 7월 컴퓨터 프로그래밍 언어 순위, 프로그래밍 언어 점유율을 발표한다.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>자료출처: <a href="https://fileinfo.com/extension/xl" class="uri">https://fileinfo.com/extension/xl</a><a href="학급데이타-정리.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://en.wikipedia.org/wiki/Command-line_interface" class="uri">https://en.wikipedia.org/wiki/Command-line_interface</a><a href="학급데이타-정리.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>해들리위컴, 개럿 그롤몬드. 김설기, 최혜민(역). (2013). <em>R을 활용한 데이타 과학: 데이타 불러오기, 정리하기, 변형하기, 시각화하기, 모델링하기(3쇄).</em> 서울: 프로그래밍인사이트.<a href="학급데이타-정리.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>캠브리지 영어사전 <a href="https://dictionary.cambridge.org/dictionary/english/dos" class="uri">https://dictionary.cambridge.org/dictionary/english/dos</a><a href="학급데이타-정리.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Coursera. (2021). Python or R for Data Analysis: Which Should I Learn?.
+<a href="https://www.coursera.org/articles/python-or-r-for-data-analysis?utm_source=gg&amp;utm_medium=sem&amp;utm_content=01-CatalogDSA-ML2-US&amp;campaignid=12490862811&amp;adgroupid=119269357576&amp;device=c&amp;keyword=&amp;matchtype=b&amp;network=g&amp;devicemodel=&amp;adpostion=&amp;creativeid=503940597764&amp;hide_mobile_promo&amp;gclid=Cj0KCQjw3f6HBhDHARIsAD_i3D_hcI6alWxBSZs10p4JmFkjGZnpzCd4PCocz5kMsmqsJDqsqjD9jhcaAud9EALw_wcB" class="uri">https://www.coursera.org/articles/python-or-r-for-data-analysis?utm_source=gg&amp;utm_medium=sem&amp;utm_content=01-CatalogDSA-ML2-US&amp;campaignid=12490862811&amp;adgroupid=119269357576&amp;device=c&amp;keyword=&amp;matchtype=b&amp;network=g&amp;devicemodel=&amp;adpostion=&amp;creativeid=503940597764&amp;hide_mobile_promo&amp;gclid=Cj0KCQjw3f6HBhDHARIsAD_i3D_hcI6alWxBSZs10p4JmFkjGZnpzCd4PCocz5kMsmqsJDqsqjD9jhcaAud9EALw_wcB</a><a href="학급데이타-정리.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Muenchen, R, A. (2020). The Popularity of Data Science Software. <a href="http://r4stats.com/articles/popularity" class="uri">http://r4stats.com/articles/popularity</a><a href="학급데이타-정리.html#fnref6" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="r과-rstudio설치.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="내신등급-변화-그래프.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book_2021.pdf", "book_2021.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

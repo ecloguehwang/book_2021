@@ -1,0 +1,32 @@
+--- 
+title: "교사가 알면 알수록 좋은 R: 교육데이타 분석"
+author: "황성삼"
+date: '`r Sys.Date()`'
+output:
+  word_document: default
+  pdf_document: default
+documentclass: book
+bibliography:
+- book.bib
+- packages.bib
+biblio-style: apalike
+link-citations: yes
+description: 이책은 선생님들을 위한 R입문서입니다.
+site: bookdown::bookdown_site
+header-includes:
+  - \usepackage{kotex}
+---
+
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+
+
+
+

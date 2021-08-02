@@ -1,0 +1,40 @@
+# igraph 활용
+
+## igraph를 활용한 생기부자료 정리
+
+
+필요한 라이브러리를 불러오기
+```{r echo=TRUE}
+pacman::p_load(dplyr, igraph, gcookbook, readxl)
+```
+
+
+필요한 엑셀파일을 불러오기
+```{r echo=TRUE}
+igraph_slife = read_excel("H:/Stat/R/Projects/slife/igraph_slife.xlsx")
+```
+
+
+
+리스트 만들기
+```{r echo=TRUE}
+network = graph_from_data_frame(d = igraph_slife, directed = F)
+```
+
+
+연결수 리스트 만들기
+```{r echo=TRUE}
+deg = degree(network, mode = "all")
+```
+
+
+igraph 그래프 그리기
+```{r echo=TRUE}
+plot(network,
+     vertex.size = deg * 4,
+     vertex.color = rgb(0.1, 0.7, 0.8, 0.5))
+```
+
+
+## igraph를 활용한 교우관계
+

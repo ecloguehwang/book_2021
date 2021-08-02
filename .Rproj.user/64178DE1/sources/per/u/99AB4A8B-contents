@@ -1,0 +1,10 @@
+v <- rep(1:10, each=150)
+
+head(v)
+
+View(v)
+
+
+a = rep(1: 10)
+
+a
